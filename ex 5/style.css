@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+}
+
+body{
+    background-color: rgb(243,243,243);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1em;
+}
+
+.auteur, .citation{
+    background-color: white;
+    padding: 1em 4em;
+}
+
+.all{
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 2em;
+    width: fit-content;
+    transition: 
+       box-shadow 0.7s; 
+}
+
+.auteur{
+    text-align: right;
+}
+
+.citation {
+    font-style: italic;
+    font-size: 1.3em;
+    text-align: center;
+}
+.citation::before {
+    content: open-quote;
+}
+
+.citation::after {
+    content: close-quote;
+}
+
+.citationContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
