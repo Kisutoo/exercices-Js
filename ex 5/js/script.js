@@ -2,7 +2,14 @@ import { quotes } from './quotes.js';
 
 const container = document.querySelector('.citationContainer');
 
+<<<<<<< HEAD
 makeCitation(quotes, container)
+=======
+makeCitation(quotes, container);
+
+
+
+>>>>>>> 191fd7e625454e2f723da10dd569b36852a34e08
 
 function makeCitation(quotes, container)  // Creation des citation en fonction de ce que contient quotes
 {
@@ -24,6 +31,7 @@ function makeCitation(quotes, container)  // Creation des citation en fonction d
                                                             // Organisation des div, citation et auteur dans all et all dans container
         container.appendChild(allDiv);
 
+<<<<<<< HEAD
         allDiv.addEventListener('click', () => addFav(allDiv))
     });
 }
@@ -36,17 +44,34 @@ function addFav(citation, ) // Changement de style pour le favori
     console.log(citation);
     const citationInStorage = localStorage.getItem('favCitation');
     const citations = citationInStorage ? JSON.parse(citationInStorage) : [];
+=======
+        allDiv.addEventListener('click', () => addFav(allDiv))      // Changement du style pour insinuer qu'on le met en favori
+    });
+}
+
+function addFav(citation) // Changement de style pour le favori
+{
+    let index = parseInt(citation.getAttribute('data-index')) || 0; // Donner un index à la citation
+>>>>>>> 191fd7e625454e2f723da10dd569b36852a34e08
     
     if(index === 0)
     {
         citation.style.boxShadow = "rgba(100, 20, 67, 0.29) 0px 54px 55px, rgba(145, 15, 123, 0.12) 0px -12px 30px, rgba(88, 17, 67, 0.12) 0px 4px 6px, rgba(105, 11, 93, 0.17) 0px 12px 13px, rgba(109, 4, 95, 0.09) 0px -3px 5px"
         citation.setAttribute('data-index', '1'); // Couleur de fond + changement index
+<<<<<<< HEAD
         localStorage.setItem('favCitation', JSON.stringify(citation));
+=======
+        localStorage.setItem("favCitation", citation.innerText);
+>>>>>>> 191fd7e625454e2f723da10dd569b36852a34e08
     }
     else
     {
         citation.style.boxShadow = ""
         citation.setAttribute('data-index', '0'); // Remise à 0 + changement index
+<<<<<<< HEAD
         localStorage.removeItem('favCitation');
+=======
+        localStorage.removeItem("favCitation");
+>>>>>>> 191fd7e625454e2f723da10dd569b36852a34e08
     }
 }   
