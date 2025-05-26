@@ -4,7 +4,7 @@ const cssCarre = window.getComputedStyle(carre);
 let id = carre.className;
 let bgColor = cssCarre.getPropertyValue("background-color");
 let color = cssCarre.getPropertyValue("color");
-let height = cssCarre.getPropertyValue("height");
+let height = cssCarre.getPropertyValue("height");       // Assignation des variables en fonction des informations que l'on veut récupérer du carré
 let width = cssCarre.getPropertyValue("width");
 let display = cssCarre.getPropertyValue("display");
 let font = cssCarre.getPropertyValue("font-family") + " (" + cssCarre.getPropertyValue("font-size") + ")";
@@ -13,7 +13,7 @@ let boxInfos = ["Class : " + id + "\n- Background color = " + bgColor + "\n- Col
 
 carre.addEventListener('click', alertbox);
 
-function alertbox()
+function alertbox() // Fontion qui sert à afficher une boite d'alerte
 {
-    alert(boxInfos);
+    alert(boxInfos); // Affiche la boite d'alerte avec les valeurs de notre choix 
 }

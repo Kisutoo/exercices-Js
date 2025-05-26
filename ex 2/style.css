@@ -37,6 +37,8 @@
     color: white;
     display: flex;
     align-items: center;
+    transition: 
+        background-color 0.5s;
 }
 
 main{
