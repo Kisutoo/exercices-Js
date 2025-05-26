@@ -42,6 +42,9 @@ function changeColor(reseau, color, reseautxt, nomReseau) // Fonction pour chang
 }   
 
 
+
+
+
 /* function changeColor(reseau, color, reseautxt, nomReseau) {
     // Liste de tous les réseaux
     const reseaux = [fb, tt, insta];
