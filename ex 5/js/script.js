@@ -42,7 +42,7 @@ function makeCitation(quotes, container)  // Creation des citation en fonction d
 function addFav(citationDiv, auteur, citation) // Changement de style pour le favori
 {
     const citationText = `${auteur}-${citation}`;
-    let favs = JSON.parse(localStorage.getItem('favCitations')) // Parcours du tableau LocalStorage 
+    let favs = JSON.parse(localStorage.getItem('favCitations')) || [];// Parcours du tableau LocalStorage 
 
     const isFav = favs.includes(citationText); // Assigne à isFav, la citation sur laquelle on vient de cliquer
 
@@ -54,7 +54,7 @@ function addFav(citationDiv, auteur, citation) // Changement de style pour le fa
     }
     else
     {
-        citationDiv.style.boxShadow = ""
+        citationDiv.style.boxShadow = "";
         citationDiv.setAttribute('data-index', '0'); // Remise à 0 + changement index
         favs = favs.filter(c => c !== citationText); // Filtre la citation pour la retirer du tableau du local storage
     }
